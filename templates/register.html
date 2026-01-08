@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouponX - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="brand" style="justify-content: center; margin-bottom: 1.5rem;">
+            <span>🎟️</span> CouponX
+        </div>
+        <h2>Create Account</h2>
+        <p class="text-sm" style="margin-bottom: 2rem;">Join the community to exchange coupons</p>
+
+        <form action="/register" method="POST">
+            <div style="text-align: left;">
+                <label class="text-sm">Choose Username</label>
+                <input type="text" name="username" required placeholder="e.g. johndoe">
+            </div>
+
+            <div style="text-align: left;">
+                <label class="text-sm">Password</label>
+                <input type="password" name="password" required placeholder="••••••••">
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Sign Up</button>
+        </form>
+
+        <p class="text-sm" style="margin-top: 1.5rem;">
+            Already have an account? <a href="/login" style="color: var(--primary);">Login</a>
+        </p>
+    </div>
+</body>
+
+</html>

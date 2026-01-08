@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CouponX - Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            font-weight: 600;
+            background: #f9fafb;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>🛡️</span> Admin Panel</div>
+        <div class="nav-links">
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="stats-card">
+            <h2>User Management</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Given</th>
+                        <th>Taken</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ users_rows }}
+                </tbody>
+            </table>
+        </section>
+
+        <section class="stats-card">
+            <h2>All Coupons</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Offer</th>
+                        <th>Owner</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ coupons_rows }}
+                </tbody>
+            </table>
+        </section>
+        <section class="stats-card">
+            <h2>System Activity Log</h2>
+            <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                {{ recent_activity }}
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

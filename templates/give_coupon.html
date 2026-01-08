@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CouponX - Give Coupon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>🎟️</span> CouponX</div>
+        <div class="nav-links">
+            <a href="/dashboard">Back to Dashboard</a>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 600px;">
+        <div class="stats-card">
+            <h2>Add a New Coupon</h2>
+            <p class="text-sm" style="margin-bottom: 1.5rem;">Fill in the details below to share your coupon.</p>
+
+            <form action="/add_coupon" method="POST">
+                <label>Category</label>
+                <select name="category" required>
+                    <option value="Food">🍔 Food</option>
+                    <option value="Beauty">💄 Beauty</option>
+                    <option value="Electronics">📱 Electronics</option>
+                    <option value="Subscriptions">📺 Subscriptions</option>
+                </select>
+
+                <label>Brand Name</label>
+                <input type="text" name="brand" placeholder="e.g. Starbucks, Amazon" required>
+
+                <label>Offer Details</label>
+                <input type="text" name="offer" placeholder="e.g. 20% Off, Buy 1 Get 1" required>
+
+                <label>Coupon Code</label>
+                <input type="text" name="code" placeholder="e.g. SAVE20" required>
+
+                <label>Expiry Date</label>
+                <input type="date" name="expiry" required>
+
+                <div style="margin-top: 1rem;">
+                    <button type="submit" class="btn" style="width: 100%;">Share Coupon</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

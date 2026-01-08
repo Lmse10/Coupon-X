@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CouponX - My Coupons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            font-weight: 600;
+            background: #f9fafb;
+            color: var(--text-muted);
+        }
+
+        .code-block {
+            background: #eee;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>🎟️</span> CouponX</div>
+        <div class="nav-links">
+            <a href="/dashboard">Back to Dashboard</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats-card">
+            <h2>My Claimed Coupons</h2>
+            <p class="text-sm" style="margin-bottom: 2rem;">Here are the deals you have claimed.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Offer</th>
+                        <th>Code</th>
+                        <th>Expiry Date</th>
+                        <th>From User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ coupons_rows }}
+                </tbody>
+            </table>
+
+            {{ no_coupons_msg }}
+        </div>
+    </div>
+</body>
+
+</html>

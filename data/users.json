@@ -1,0 +1,33 @@
+[
+    {
+        "username": "admin",
+        "password": "admin123",
+        "is_admin": true,
+        "coupons_given": 0,
+        "coupons_taken": 0,
+        "given_history": [],
+        "taken_history": []
+    },
+    {
+        "username": "userB",
+        "password": "pass",
+        "is_admin": false,
+        "coupons_given": 1,
+        "coupons_taken": 1,
+        "given_history": [
+            "feff588f"
+        ],
+        "taken_history": [
+            "84c872d9"
+        ]
+    },
+    {
+        "username": "liya",
+        "password": "liya",
+        "is_admin": false,
+        "coupons_given": 0,
+        "coupons_taken": 0,
+        "given_history": [],
+        "taken_history": []
+    }
+]

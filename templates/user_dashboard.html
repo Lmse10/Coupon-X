@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CouponX - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>🎟️</span> CouponX</div>
+        <div class="nav-links">
+            <span style="margin-right: 1rem;">Hi, <strong>{{ username }}</strong></span>
+            <a href="/dashboard" style="color: var(--primary);">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+
+    <div class="container dashboard-grid">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            {{ sidebar_content }}
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 style="font-size: 2rem;">What would you like to do?</h1>
+
+            <div class="dashboard-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; display: grid;">
+                <div class="stats-card" style="text-align: center; padding: 3rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎁</div>
+                    <h2>Give Coupon</h2>
+                    <p class="text-sm" style="margin-bottom: 2rem;">Share unused coupons and earn credits to take new
+                        ones.</p>
+                    <a href="/give" class="btn">Share a Deal</a>
+                </div>
+
+                <div class="stats-card" style="text-align: center; padding: 3rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛍️</div>
+                    <h2>Take Coupon</h2>
+                    <p class="text-sm" style="margin-bottom: 2rem;">Browse categorized deals and claim what you need.
+                    </p>
+                    <a href="/take" class="btn" style="background: var(--success);">Browse Deals</a>
+                </div>
+
+                <div class="stats-card" style="text-align: center; padding: 3rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📂</div>
+                    <h2>My Coupons</h2>
+                    <p class="text-sm" style="margin-bottom: 2rem;">View and manage the coupons you have claimed.</p>
+                    <a href="/my_coupons" class="btn" style="background: var(--primary-dark);">View Wallet</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CouponX - Take Coupon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>🎟️</span> CouponX</div>
+        <div class="nav-links">
+            <a href="/dashboard">Back to Dashboard</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Browse Coupons</h1>
+        {{ alert }}
+
+        <div style="margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="/take?category=Food" class="btn btn-outline">🍔 Food</a>
+            <a href="/take?category=Beauty" class="btn btn-outline">💄 Beauty</a>
+            <a href="/take?category=Electronics" class="btn btn-outline">📱 Electronics</a>
+            <a href="/take?category=Subscriptions" class="btn btn-outline">📺 Subscriptions</a>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">Showing: {{ current_category }}</h3>
+
+        <div class="coupon-grid">
+            {{ coupons_grid }}
+        </div>
+    </div>
+</body>
+
+</html>

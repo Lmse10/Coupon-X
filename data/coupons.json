@@ -1,0 +1,12 @@
+[
+    {
+        "id": "84c872d9",
+        "owner_username": "userA",
+        "category": "Electronics",
+        "brand": "TestBrandA",
+        "offer_amount": "10% Off",
+        "expiry_date": "2025-12-31",
+        "code": "N/A",
+        "status": "exchanged"
+    }
+]
